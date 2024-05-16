@@ -17,7 +17,7 @@ Open-source cleaner program that removes all the cache files in the system.
   ```
 - Initialize the UI with
 ```
-python ui.py
+python main.py
 ````
 
 ![imagen](https://github.com/Kuvrot/OpenCleaner/assets/23508114/1f627ee3-b9be-498f-ae4c-80230b50f037)
