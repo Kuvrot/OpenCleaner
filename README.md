@@ -4,7 +4,7 @@ Open-source cleaner program that removes all the cache files in the system.
 ## how it works
 * It cleans all the Cache in your system, by deleting all the directories that are named "cache" or that include the word "cache" in their name.
 * File that are protected or that are beign currently used will not be deleted.
-* It only works on windows for now.
+* It only works on Windows for now.
 
 ## Run (pull requests are welcome!)
 - Install customtkinter
@@ -20,5 +20,6 @@ Open-source cleaner program that removes all the cache files in the system.
 python main.py
 ````
 
-![imagen](https://github.com/Kuvrot/OpenCleaner/assets/23508114/1f627ee3-b9be-498f-ae4c-80230b50f037)
+![imagen](https://github.com/Kuvrot/OpenCleaner/assets/23508114/2fd94a97-cd83-4e9f-b15e-56abfa48277e)
+
 
