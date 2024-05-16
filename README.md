@@ -15,10 +15,10 @@ Open-source cleaner program that removes all the cache files in the system.
   ```
   git clone https://github.com/Kuvrot/OpenCleaner.git
   ```
-- Initialize the UI with
-```
-python main.py
-````
+- Initialize the program with
+  ```
+  python main.py
+  ````
 
 ![imagen](https://github.com/Kuvrot/OpenCleaner/assets/23508114/2fd94a97-cd83-4e9f-b15e-56abfa48277e)
 
