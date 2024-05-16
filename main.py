@@ -7,6 +7,7 @@ customtkinter.set_default_color_theme("green")  # Themes: blue (default), dark-b
 
 app = customtkinter.CTk()  # create CTk window like you do with the Tk window
 app.geometry("500x400")
+app.title("OpenCleaner")
 
 cleaning = False
 
@@ -15,27 +16,34 @@ header.pack(expand=True)
 header.place(rely=0.0)
 
 appName = customtkinter.CTkLabel(master=header, text="OpenCleaner")
-appName.place(relx=0.1 , rely= 0.1)
+appName.place(relx=0.0 , rely= 0.1)
+
+#declaring the labels but not placing them yet
+loadingLabel = customtkinter.CTkLabel(master=app, text="Cleaning...")
+loadingLabel2 = customtkinter.CTkLabel(master=app, text="Please wait")
 
 # Root directory (C: on Windows)
 root_directory = 'C:\\'
 def Cleaning ():
    cleaner.SearchAndDelete(root_directory)
-
-loadingLabel = customtkinter.CTkLabel(master=app, text="Cleaning...")
-loadingLabel2 = customtkinter.CTkLabel(master=app, text="Please wait")
+   Finished()
 
 def Clean():
-    cleaning = True
-    if (cleaning):
+    global cleaning
+    if (cleaning is False):
      loadingLabel.place(relx = 0.5 , rely=0.8, anchor=customtkinter.CENTER)
      loadingLabel2.place(relx = 0.5 , rely=0.9, anchor=customtkinter.CENTER)
      processThread = th.Thread(target=Cleaning)
      processThread.start()
+     cleaning = True
 
-def Finishing ():
-       loadingLabel.update(text="Finished")
-       loadingLabel2.update(text="")
+def Finished ():
+       loadingLabel.configure(text="Finished")
+       loadingLabel2.configure(text="")
+       loadingLabel.update()
+       loadingLabel2.update()
+       global cleaning
+       cleaning = False
    
 button = customtkinter.CTkButton(master=app, text="Start cleaning", command=Clean)
 button.place(relx=0.5, rely=0.7, anchor=customtkinter.CENTER)
