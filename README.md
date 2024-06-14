@@ -22,4 +22,12 @@ Open-source cleaner program that removes all the cache files in the system.
 
 ![imagen](https://github.com/Kuvrot/OpenCleaner/assets/23508114/2fd94a97-cd83-4e9f-b15e-56abfa48277e)
 
+## Known problems:
+- If you have Unreal Engine installed and try to open a project you may encounter the following error:
+ ```
+  This project requires the 'Alembic Importer' plugin, which has a missing dependency on the 'Geometry Cache' plugin.
+```
+   * How to fix: Verify your Unreal engines installation. Note: Unreal engine projects may took longer to open for the first time after cleaning
+- All your software may take longer to open the first time after cleaning.
+
 
