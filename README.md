@@ -1,7 +1,7 @@
 # OpenCleaner
 Open-source cleaner program that removes all the cache files in the system. 
 
-## how it works
+## How it works
 * It cleans all the Cache in your system, by deleting all the directories that are named "cache" or that include the word "cache" in their name.
 * Files that are protected or that are beign currently used will not be deleted.
 * It only works on Windows for now.
