@@ -9,6 +9,19 @@ def SearchAndDelete(root):
             if 'system32' in root_directory.lower():
                 continue
 
+            if 'Windows' in root_directory.lower():
+                continue
+
+            if 'WinSxS' in root_directory.lower():
+                continue
+            
+            if 'windows' in root_directory.lower():
+                continue
+
+            if 'winSxS' in root_directory.lower():
+                continue
+            
+
             # Check if the subdir name contains 'cache' or 'Cache'
             if 'cache' in subdir or 'Cache' in subdir:
                 directory_path = os.path.join(root_directory, subdir)
